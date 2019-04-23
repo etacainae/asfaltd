@@ -30,7 +30,7 @@ h2 {
   color: #181818;
   font-family: "DINPro-CondensedBold", sans-serif;
   font-size: 44px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 30px;
 }
 .title p {
@@ -41,12 +41,19 @@ h2 {
   font-weight: 400;
   line-height: 30px;
 }
-.logo-desc {
-  width: 167px;
-  opacity: 0.5;
+.btn {
+  display: inline-block;
+  -webkit-box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #181818;
   color: #ffffff;
-  font-size: 12px;
-  letter-spacing: 0.9px;
+  font-family: "DINPro-CondensedBold", sans-serif;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+}
+.tel-btn {
+  font-family: "DINPro-CondensedBold", sans-serif !important;
 }

@@ -1,44 +1,47 @@
-$(document).ready(function() {
-  $("#mmenu").mmenu({
-    extensions: [ 'widescreen', 'effect-menu-slide', 'pagedim-black' ],
-    navbar: {
-      title: "lolipop"
-    },
-    offCanvas: {
-      position: "right"
-    },
-    
-  });
+ $(window).scroll(function () {
+   if ($(this).scrollTop() > 100) {
+     $('#header').addClass('white-header');
+   }
+   else{
+     $('#header').removeClass('white-header');
+   }
+ });
+
+$('.header-menu ul li').on('click', function(){
+  $(".header-submenu").slideToggle("slow");
+  //$(this).toggleClass('faqs-active');
+  //$(this).addClass('faqs-active');
 });
 
-$('.kinds-slider__item').on('click', function(){
-  $('.kinds-slider__item').removeClass('kinds-active');
-  $(this).addClass('kinds-active');
-});
-
-var links = document.querySelectorAll('.kinds-slider__item');
-var content = document.querySelectorAll('.kinds-content__item');
-for(var i=0; i <links.length; i++) {
-   (function(i) {
-      var link = links[i];
-      link.onclick = function() {
-          for(var j=0; j <content.length; j++) {
-             var display = window.getComputedStyle(content[j]).display;
-             if(display == "block") {
-                content[j].style.display = "none";
-             }
-          }
-       content[i].style.display = "block";
+ $('.thanks-slider').slick({
+   infinite: true,
+   slidesToShow: 3,
+   slidesToScroll: 1,
+   arrows: true,
+   prevArrow: '<img class="thanks-prevArrow" src="img/thanks/slider-arrow.png"/>',
+   nextArrow: '<img class="thanks-nextArrow" src="img/thanks/slider-arrow.png"/>',
+   responsive: [
+     {
+       breakpoint: 600,
+       settings: {
+         slidesToShow: 2,
+         slidesToScroll: 1
        }
-   })(i);
-}
+     },
+     {
+       breakpoint: 480,
+       settings: {
+         slidesToShow: 1,
+         slidesToScroll: 1
+       }
+     }
+     // You can unslick at a given breakpoint now by adding:
+     // settings: "unslick"
+     // instead of a settings object
+   ]
+ });
 
-$('.portfolio__nav-item').on('click', function(){
-  $('.portfolio__nav-item').removeClass('portfolio__nav-active');
-  $(this).addClass('portfolio__nav-active');
-});
-
-$('.faqs-wrap__item').on('click', function(){
-  $('.faqs-wrap__item').removeClass('faqs-active');
-  $(this).toggleClass('faqs-active');
+$('.price-btn').on('click', function(){
+  $('.hidden-column').toggleClass('price-active');
+  $(this).removeClass('price-active');
 });
