@@ -19,7 +19,7 @@ h2 {
   color: #181818;
   font-family: "DINPro-CondensedBold", sans-serif;
   font-size: 44px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 50px;
 }
 .title {
@@ -38,7 +38,7 @@ h2 {
   color: #181818;
   font-family: "DINPro-CondensedBold", sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 30px;
 }
 .btn {
@@ -50,7 +50,7 @@ h2 {
   color: #ffffff;
   font-family: "DINPro-CondensedBold", sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 50px;
   letter-spacing: 0.5px;
 }

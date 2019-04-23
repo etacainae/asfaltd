@@ -8,9 +8,9 @@
  });
 
 $('.header-menu ul li').on('click', function(){
-  $(".header-submenu").slideToggle("slow");
-  //$(this).toggleClass('faqs-active');
-  //$(this).addClass('faqs-active');
+  $(this).children(".header-submenu").slideToggle("slow");
+  $(this).children(".header-submenu").toggleClass('header-submenu_active');
+  $(this).children(".header-submenu").addClass('header-submenu_active');
 });
 
  $('.thanks-slider').slick({
@@ -35,13 +35,46 @@ $('.header-menu ul li').on('click', function(){
          slidesToScroll: 1
        }
      }
-     // You can unslick at a given breakpoint now by adding:
-     // settings: "unslick"
-     // instead of a settings object
    ]
  });
 
 $('.price-btn').on('click', function(){
-  $('.hidden-column').toggleClass('price-active');
-  $(this).removeClass('price-active');
+  $(".price-wrap .hidden-column").slideToggle("slow");
+});
+// popup img
+$(document).ready(function() {
+  $('.slick-track').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1]
+    }
+  });
+});
+$(document).ready(function() {
+  $('#awards-section .img-wrap').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1]
+    }
+  });
+});
+$(document).ready(function() {
+  $('.awards-wrap__item').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1]
+    }
+  });
 });

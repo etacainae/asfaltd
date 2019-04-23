@@ -46,7 +46,12 @@ section {
 		justify-content: space-between;
 		width: 100%;
 	}
-	a {
+	li {
+		position: relative;
+	}
+	&__link {
+		display: block;
+		cursor: pointer;
 		position: relative;
 		list-style-type: none;
 		color: #969696;
@@ -58,7 +63,7 @@ section {
 			&:after {
 				content: '';
 				position: absolute;
-				top: -45px;
+				top: -41px;
 				left: 0;
 				width: 100%;
 				height: 4px;
@@ -77,7 +82,22 @@ section {
 	.header-submenu {
 		display: none;
 		position: absolute;
+		top: 59px;
+		left: 0;
+		background-color: #fff;
+		a {
+			display: block;
+			padding: 8px 10px;
+			border-bottom: 1px solid #181818;
+		    color: #969696;
+		    font-size: 16px;
+		    font-weight: 400;
+		}
+	}
+	.header-submenu_active {
 		width: 100px;
+		display: flex;
+		flex-direction: column;
 	}
 }
 .header-menu {
@@ -114,7 +134,7 @@ section {
 			color: #181818;
 			font-family: @dinpro;
 			font-size: 44px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 30px;
 		}
 	}
@@ -128,8 +148,11 @@ section {
 }
 #info-section {
 	margin-top: 50px;
-	background: url(../img/image.png) no-repeat;
-	background-position: 100% 0%;
+	.container {
+
+		background: url(../img/image.png) no-repeat;
+		background-position: 100% 0%;
+	}
 	.opening-text {
 		width: 640px;
 		color: #969696;
@@ -148,7 +171,7 @@ section {
 			color: #181818;
 			font-family: @dinpro;
 			font-size: 32px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 30px;
 			text-transform: uppercase;
 		}
@@ -172,15 +195,18 @@ section {
 				color: #181818;
 				font-family: @dinpro;
 				font-size: 24px;
-				font-weight: 400;
+				font-weight: 700;
 				line-height: 30px;
 			}
 			a {
 				color: #181818;
 				font-family: @arial;
-				font-size: 26px;
-				font-weight: bold;
+				font-size: 24px;
+				font-weight: 700;
 				line-height: 30px;
+			}
+			.tel-btn {
+				font-size: 26px;
 			}
 		}
 	}
@@ -222,7 +248,7 @@ section {
 		color: #969696;
 		font-family: @dinpro;
 		font-size: 20px;
-		font-weight: 400;
+		font-weight: 700;
 		line-height: 30px;
 		text-transform: uppercase;
 		li {
@@ -255,9 +281,6 @@ section {
 .hidden-column {
 	width: 100%;
 	display: none;
-}
-.price-active {
-	display: block;
 }
 #thanks-section {
 	padding-top: 85px;
@@ -292,7 +315,7 @@ section {
 			color: #181818;
 			font-family: @dinpro;
 			font-size: 44px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 50px;
 		}
 		p {
@@ -300,7 +323,7 @@ section {
 			color: #181818;
 			font-family: @dinpro;
 			font-size: 24px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 30px;
 		}
 		.btn {
@@ -374,11 +397,13 @@ section {
 	}
 	.title:before {
 		content: url(../img/02.png);
+		z-index: -1;
 		position: absolute;
 		top: -105px;
 		transform: translateX(-430px);
 	}
 	.img-wrap {
+		margin-top: 30px;
 		height: 420px;
 		width: 100%;
 		display: flex;
@@ -393,10 +418,7 @@ section {
 		text-align: center;
 		h2 {
 			background: url(../img/line-2.png) center center no-repeat;
-			color: #181818;
-			font-family: @dinpro;
 			font-size: 24px;
-			font-weight: 400;
 		}
 		p {
 			margin-top: 30px;
@@ -423,7 +445,7 @@ section {
 				color: #181818;
 				font-family: @dinpro;
 				font-size: 24px;
-				font-weight: 400;
+				font-weight: 700;
 				line-height: 30px;
 			}
 			p {
@@ -436,6 +458,7 @@ section {
 		}
 		&:after {
 			content: url(../img/linii1.png);
+			z-index: -1;
 			position: absolute;
 			top: 0;
 			left: 50%;
@@ -496,8 +519,8 @@ section {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: space-between;
 		&__item {
-			margin-right: 50px;
 			display: flex;
 			max-width: 395px;
 			height: 190px;
@@ -534,8 +557,10 @@ section {
 }
 #contacts-section {
 	position: relative;
-	padding-bottom: 395px;
-	background: url(../img/contacts-bg.png) top right no-repeat;
+	.container {
+		padding-bottom: 395px;
+		background: url(../img/contacts-bg.png) top right no-repeat;
+	}
 	.contacts-wrap {
 		width: 580px;
 	}
@@ -543,7 +568,7 @@ section {
 		color: #181818;
 		font-family: @dinpro;
 		font-size: 44px;
-		font-weight: 400;
+		font-weight: 700;
 		line-height: 50px;
 		span {
 			font-size: 24px;
@@ -552,6 +577,7 @@ section {
 	}
 	p {
 		margin-top: 30px;
+		margin-bottom: 4px;
 		color: #181818;
 		font-size: 18px;
 		font-weight: 400;
@@ -564,7 +590,7 @@ section {
 			color: #181818;
 			font-family: @dinpro;
 			font-size: 24px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 30px;
 		}
 		a {
@@ -573,6 +599,9 @@ section {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 20px;
+		}
+		.tel-btn {
+			font-size: 26px;
 		}
 		.column:nth-child(1) {
 			margin-right: 50px;
@@ -645,14 +674,12 @@ section {
 		a {
 			color: #181818;
 			font-size: 18px;
-			font-weight: 400;
+			font-weight: 700;
 			line-height: 36px;
 		}
 		.tel-btn {
 			margin-bottom: 14px;
-			font-family: @dinpro;
 			font-size: 24px;
-			font-weight: bold;
 			letter-spacing: 0.6px;
 		}
 		p {
