@@ -38,10 +38,46 @@ $('.header-menu ul li').on('click', function(){
    ]
  });
 
+ $(document).ready(function(){
+   var button = $('.thanks-btn');
+   var form = $('.thanks-popup');
+   var overlay = $('.overlay');
+   var close = $('.thanks-close');
+   var body = $('body');
+
+   button.click(function(){
+     form.css("display", "flex");
+     overlay.css("display", "block");
+     body.css("overflow", "hidden");
+   });
+   close.click(function(){
+     form.css("display", "none");
+     overlay.css("display", "none");
+     body.css("overflow", "scroll");
+   });
+   overlay.click(function(){
+     form.css("display", "none");
+     overlay.css("display", "none");
+     body.css("overflow", "scroll");
+   });
+ });
+
 $('.price-btn').on('click', function(){
   $(".price-wrap .hidden-column").slideToggle("slow");
 });
 // popup img
+$(document).ready(function() {
+  $('.thanks-popup').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1]
+    }
+  });
+});
 $(document).ready(function() {
   $('.slick-track').magnificPopup({
     delegate: 'a',
