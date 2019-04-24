@@ -45,6 +45,7 @@ section {
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		height: 100%;
 	}
 	li {
 		position: relative;
@@ -57,13 +58,16 @@ section {
 		color: #969696;
 		font-size: 16px;
 		font-weight: 400;
+   		line-height: 100px;
+   		letter-spacing: 0.8px;
 		&:hover {
 			color: #181818;
 			font-weight: 700;
+			letter-spacing: 0px;
 			&:after {
 				content: '';
 				position: absolute;
-				top: -41px;
+				top: 0;
 				left: 0;
 				width: 100%;
 				height: 4px;
@@ -82,20 +86,21 @@ section {
 	.header-submenu {
 		display: none;
 		position: absolute;
-		top: 59px;
+		top: 100px;
 		left: 0;
 		background-color: #fff;
+		height: max-content;
+		min-width: max-content;
 		a {
 			display: block;
 			padding: 8px 10px;
-			border-bottom: 1px solid #181818;
+			border-bottom: 1px solid #969696;
 		    color: #969696;
 		    font-size: 16px;
 		    font-weight: 400;
 		}
 	}
 	.header-submenu_active {
-		width: 100px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -390,6 +395,9 @@ section {
 		&__item {
 			.sertificate {
 				border: 6px solid #000;
+				&:hover {
+					opacity: .8;
+				}
 			}
 		}
 		.logo {
@@ -410,14 +418,14 @@ section {
 	.thanks-prevArrow {
 		cursor: pointer;
 		position: absolute;
-		right: 73px;
+		right: 103px;
 		bottom: -74px;
 	}
 	.thanks-nextArrow {
 		cursor: pointer;
 		transform: rotate(180deg);
 		position: absolute;
-		right: 0;
+		right: 30px;
 		bottom: -74px;
 	}
 }

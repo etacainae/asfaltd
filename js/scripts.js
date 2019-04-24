@@ -7,8 +7,8 @@
    }
  });
 
-$('.header-menu ul li').on('click', function(){
-  $(this).children(".header-submenu").slideToggle("slow");
+$('.header-menu ul li').hover(function(){
+  $(this).children(".header-submenu").slideToggle();
   $(this).children(".header-submenu").toggleClass('header-submenu_active');
   $(this).children(".header-submenu").addClass('header-submenu_active');
 });
